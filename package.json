@@ -1,0 +1,16 @@
+{
+  "name": "zagori",
+  "version": "1.0.0",
+  "description": "Multi-purpose HTTP test server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "express": "^4.13.4"
+  }
+}
