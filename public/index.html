@@ -6,7 +6,7 @@
       var id = 0;
       var delay = 2000;
       var makeRequest = function() {
-        $.get("/ping/" + id++, function(data) { console.log("Got data: ", data); });
+        $.get("/ping/" + id++, function(data) {});
         setTimeout(makeRequest, delay);
       }
       makeRequest();
