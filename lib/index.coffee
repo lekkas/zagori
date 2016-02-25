@@ -1,5 +1,10 @@
 path = require 'path'
 express = require 'express'
+Randstream = require 'randstream'
+
+rand = new Randstream
+	mode: 'alpha'
+	defaultSize: 4096
 
 PORT = 80
 app = express()
@@ -19,6 +24,9 @@ app.get '/delay/:ms', (req, res) ->
 		res.writeHead(200)
 		res.end("#{req.url}")
 	, req.params.ms ? 0
+
+app.get '/download', (req, res) ->
+	rand.pipe(res)
 
 app.listen PORT, ->
 	console.log("Server listening on port #{PORT}")
