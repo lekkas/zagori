@@ -1,0 +1,7 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-node
+
+RUN npm install && npm cache clean && rm -rf /tmp/*
+
+COPY . /usr/src/app
+
+CMD ["node", "index.js"]
