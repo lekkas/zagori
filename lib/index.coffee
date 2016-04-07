@@ -25,6 +25,10 @@ app.get '/delay/:ms', (req, res) ->
 		res.end("#{req.url}")
 	, req.params.ms ? 0
 
+app.get '/redirect/:code', (req, res) ->
+	code = parseInt(req.params?.code ? '302')
+	res.redirect(code, 'http://www.google.com')
+
 app.get '/download', (req, res) ->
 	rand.pipe(res)
 
