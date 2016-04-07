@@ -1,7 +1,13 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-node
 
-RUN npm install && npm cache clean && rm -rf /tmp/*
+RUN mkdir -p /usr/src/app
 
-COPY . /usr/src/app
+WORKDIR /usr/src/app
 
-CMD ["node", "index.js"]
+COPY package.json ./
+
+RUN JOBS=MAX npm install --unsafe-perm --production && npm cache clean
+
+COPY . ./
+
+CMD npm start
