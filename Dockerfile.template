@@ -1,4 +1,4 @@
-FROM resin/raspberrypi2-node
+FROM resin/%%RESIN_MACHINE_NAME%%-node
 
 RUN mkdir -p /usr/src/app
 
