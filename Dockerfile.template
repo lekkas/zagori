@@ -1,8 +1,8 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-node
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p '/usr/src/app -t'
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app -t
 
 COPY package.json ./
 
