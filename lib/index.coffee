@@ -19,6 +19,10 @@ app.get '/ping/:id', (req, res) ->
 	res.writeHead(200)
 	res.end("#{req.url}")
 
+app.get '/lekkas', (req, res) ->
+	res.writeHead(200)
+	res.end("#{req.url}")
+
 app.get '/delay/:ms', (req, res) ->
 	setTimeout () ->
 		res.writeHead(200)
