@@ -1,4 +1,4 @@
-path = require 'path'
+pathequire 'path'
 express = require 'express'
 Randstream = require 'randstream'
 
@@ -25,7 +25,7 @@ app.get '/lekkas', (req, res) ->
 
 app.get '/john', (req, res) ->
 	res.writeHead(200)
-	res.end("#{req.url} - test7")
+	res.end("#{req.url} - test8")
 
 app.get '/delay/:ms', (req, res) ->
 	setTimeout () ->
