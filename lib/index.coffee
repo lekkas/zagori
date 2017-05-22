@@ -1,4 +1,4 @@
-pathequire 'path'
+require 'path'
 express = require 'express'
 Randstream = require 'randstream'
 
