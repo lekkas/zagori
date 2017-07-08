@@ -21,7 +21,7 @@ app.get '/ping/:id', (req, res) ->
 
 app.get '/lekkas', (req, res) ->
 	res.writeHead(200)
-	res.end("#{req.url}")
+	res.end("#{req.url} + 9")
 
 app.get '/john', (req, res) ->
 	res.writeHead(200)
