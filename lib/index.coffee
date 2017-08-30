@@ -25,7 +25,7 @@ app.get '/lekkas', (req, res) ->
 
 app.get '/john', (req, res) ->
 	res.writeHead(200)
-	res.end("#{req.url} - test8")
+	res.end("#{req.url} - test9")
 
 app.get '/delay/:ms', (req, res) ->
 	setTimeout () ->
