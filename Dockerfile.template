@@ -1,4 +1,4 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-node:slim
+FROM resin/%%RESIN_MACHINE_NAME%%-alpine-node:6-slim
 
 RUN mkdir -p '/usr/src/app -t'
 
