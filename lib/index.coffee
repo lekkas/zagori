@@ -21,11 +21,11 @@ app.get '/ping/:id', (req, res) ->
 
 app.get '/lekkas', (req, res) ->
 	res.writeHead(200)
-	res.end("#{req.url} + 8")
+	res.end("#{req.url} + 9\n")
 
 app.get '/john', (req, res) ->
 	res.writeHead(200)
-	res.end("#{req.url} - test9")
+	res.end("#{req.url} - test90\n")
 
 app.get '/delay/:ms', (req, res) ->
 	setTimeout () ->
