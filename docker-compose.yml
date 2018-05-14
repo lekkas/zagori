@@ -1,0 +1,6 @@
+version: '2'
+services:
+  zagori:
+    build: .
+    expose:
+      - "80":"80"
